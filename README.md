@@ -8,5 +8,5 @@ PDF generation consists of three steps:
 
 See working example deployed on openshift:
 - Source xml: http://php-bystrobank.rhcloud.com/eurofxref-daily/eurofxref-daily.php?format=xml
-- Tranformed to fo: http://php-bystrobank.rhcloud.com/eurofxref-daily/eurofxref-daily.php?format=fo
-- Tranformed to pdf: http://php-bystrobank.rhcloud.com/eurofxref-daily/eurofxref-daily.php?format=pdf
+- Transformed to fo: http://php-bystrobank.rhcloud.com/eurofxref-daily/eurofxref-daily.php?format=fo
+- Transformed to pdf: http://php-bystrobank.rhcloud.com/eurofxref-daily/eurofxref-daily.php?format=pdf
