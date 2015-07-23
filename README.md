@@ -7,6 +7,6 @@ PDF generation consists of three steps:
 - Transform fo to pdf using fopservlet deployed on tomcat
 
 See working example deployed on openshift:
-- source xml: http://php-bystrobank.rhcloud.com/eurofxref-daily/eurofxref-daily.php?format=xml
+- Source xml: http://php-bystrobank.rhcloud.com/eurofxref-daily/eurofxref-daily.php?format=xml
 - Tranformed to fo: http://php-bystrobank.rhcloud.com/eurofxref-daily/eurofxref-daily.php?format=fo
 - Tranformed to pdf: http://php-bystrobank.rhcloud.com/eurofxref-daily/eurofxref-daily.php?format=pdf
