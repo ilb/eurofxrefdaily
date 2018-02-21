@@ -31,7 +31,7 @@ if ($format == "fo" || $format == "pdf") {
     if ($format == "pdf") {
         //3. Transform fo to pdf
         //fop servlet url
-        $url = "http://tomcat-bystrobank.rhcloud.com/fopservlet/fopservlet";
+        $url = "http://p01.bystrobank.ru/fopservlet/fopservlet";
         curl_setopt($ch, CURLOPT_URL, $url);
         //specify mime-type of source data
         curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/xml"));
