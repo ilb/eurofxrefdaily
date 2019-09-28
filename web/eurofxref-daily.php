@@ -68,7 +68,7 @@ class Eurofxref {
     }
 
     function transformPdf($xml) {
-        $url = "http://www.demo.ilb.ru/fopservlet/fopservlet";
+        $url = "http://demo01.ilb.ru/fopservlet/fopservlet";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
