@@ -10,7 +10,6 @@ $output = null;
 $erofxref = new Eurofxref();
 $ratesxml = $erofxref->getRates();
 
-
 switch ($format) {
     case "fo":
         $headers = array("Content-type: application/xml");
@@ -28,8 +27,6 @@ switch ($format) {
     default:
         $output = $ratesxml;
 }
-
-
 
 foreach ($headers as $h) {
     header($h);
@@ -68,23 +65,20 @@ class Eurofxref {
     }
 
     function transformPdf($xml) {
-        $url = "http://demo01.ilb.ru/fopservlet/fopservlet";
+        $url = "https://demo01.ilb.ru/fopservlet/fopservlet";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/xml"));
         curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);
         $res = curl_exec($ch);
         $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        
         if ($code != 200) {
             throw new Exception($res . PHP_EOL . $url . " " . curl_error($ch), 450);
         }
         curl_close($ch);
         return $res;
     }
-
 }
